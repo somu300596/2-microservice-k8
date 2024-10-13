@@ -18,6 +18,9 @@ spec:
         image: somu123/order-service:latest
         ports:
         - containerPort: 5001
+        env:
+        - name: USER_SERVICE_URL
+          value: "http://user-service"
 ---
 apiVersion: v1
 kind: Service
